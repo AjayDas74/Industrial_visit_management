@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dewi Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/NEW.css' %}" rel="stylesheet">
+  <style>
+    .testimonial-content {
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.testimonial {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.people-info h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+.item {
+    margin-bottom: 30px;
+}
+
+/* Media Query for Responsiveness */
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+  </style>
+
+  <!-- =======================================================
+  * Template Name: Dewi
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">INDUSTRIAL VISIT</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../services">Home</a></li>
+          <li><a class="nav-link scrollto " href="../uprofile">profile</a></li>
+
+          <li><a class="nav-link scrollto" href="contact">Contact</a></li>
+           <li><a class="nav-link scrollto" href="logout">Logout</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-up" data-aos-delay="150" align="center">
+      <div class=" section-title">
+        <div class="col-lg-12 col-md-6 portfolio-item filter-app">
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+              <h1>Welcome! {{user1}}</h1>
+          <div class="col-lg-12 d-flex justify-content-center">
+            <a href="colviewivcomp" class="btn btn-outline-light" >IV Destination</a>
+
+          </div>
+        </div><br><br>
+
+<!--        <p>Contact Us</p>-->
+      </div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+
+<div class="col-lg-8 testimonials-con-right mt-lg-0 mt-5 p-xl-3">
+                <div class="row">
+                    {% for i in data %}
+                    <div class="col-md-6">
+                        <div class="item">
+                            <div class="testimonial-content">
+                                <div class="testimonial">
+                                    <div class="bottom-info mt-4">
+                                    <div class="people-info align-self">
+                                        <b> College Name:</b><i>{{ i.user.name }}</i><br>
+                                        <b>Company Name:</b><i>{{ i.comname }}</i>
+                                    </div>
+                                </div>
+
+                                    <b> Review:</b>  <q>{{ i.review }}</q>
+                                </div>
+<!--                                <div class="bottom-info mt-4">-->
+<!--                                    <div class="people-info align-self">-->
+<!--                                        College Name:<h3>{{ i.user.name }}</h3>-->
+<!--                                        Company Name:<h3>{{ i.comname }}</h3>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+  </div>
+
+
+
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="login" class="login">
+      <div class="container" data-aos="fade-up">
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>IV</h3>
+              <p>
+                Ernakulam <br>
+                High court near MG road<br><br>
+                <strong>Phone:</strong> +91 9778294812<br>
+                <strong>Email:</strong> ivpackage00@gmail.com<br>
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../contact">contact us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>IV</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX loding form: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
